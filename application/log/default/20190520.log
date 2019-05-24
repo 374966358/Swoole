@@ -1,3 +1,0 @@
-2019-05-20 19:23:27 | CRITICAL | 24191 | 5ce3611d64d65 | 1558405407.744 | Error - type:64 - file:/data/www/Anthony/framework/Anthony/Coroutine/Context.php - line:39 - msg:Cannot redeclare Anthony\Coroutine\Context::getRequest()
-2019-05-20 19:24:18 | CRITICAL | 24197 | 5ce3615152bdf | 1558405458.551 | Error - type:64 - file:/data/www/Anthony/framework/Anthony/Coroutine/Context.php - line:39 - msg:Cannot redeclare Anthony\Coroutine\Context::getRequest()
-2019-05-20 19:25:10 | CRITICAL | 24202 | 5ce3618443501 | 1558405510.410 | Error - type:64 - file:/data/www/Anthony/framework/Anthony/Coroutine/Context.php - line:39 - msg:Cannot redeclare Anthony\Coroutine\Context::getRequest()
