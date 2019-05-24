@@ -1,0 +1,15 @@
+2019-05-17 00:59:18 | CRITICAL | 18032 | 5cde69d63bda1 | 1558079958.890 | Error - type:1 - file:/data/www/Anthony/framework/Anthony/Anthony.php - line:59 - msg:Uncaught Swoole\ExitException: swoole exit in /data/www/Anthony/framework/Anthony/Anthony.php:59
+Stack trace:
+#0 {main}
+  thrown
+2019-05-17 01:05:05 | EMERGENCY | 18061 | 5cde6b2f276b0 | 1558080305.332 | Class 'controller\a' not found
+2019-05-17 01:37:55 | EMERGENCY | 18198 | 5cde72db0f6cc | 1558082275.915 | Class 'controller\Coroutine' not found
+2019-05-17 01:38:03 | EMERGENCY | 18198 | 5cde72db0f6cc | 1558082283.802 | Class 'controller\Coroutine' not found
+2019-05-17 01:44:46 | CRITICAL | 18287 | 5cde747ba9f15 | 1558082686.367 | Error - type:1 - file:/data/www/Anthony/framework/Anthony/Anthony.php - line:51 - msg:Uncaught Swoole\ExitException: swoole exit in /data/www/Anthony/framework/Anthony/Anthony.php:51
+Stack trace:
+#0 {main}
+  thrown
+2019-05-17 01:45:01 | CRITICAL | 18287 | 5cde747ba9f15 | 1558082701.234 | Error - type:1 - file:/data/www/Anthony/framework/Anthony/Anthony.php - line:51 - msg:Uncaught Swoole\ExitException: swoole exit in /data/www/Anthony/framework/Anthony/Anthony.php:51
+Stack trace:
+#0 {main}
+  thrown
