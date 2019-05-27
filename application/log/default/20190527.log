@@ -1,0 +1,14 @@
+2019-05-27 01:44:51 | EMERGENCY | 9946 | 5ceba37db3a0e | 1558946691.830 | Call to undefined method service\Book::fetchById()
+2019-05-27 01:45:21 | EMERGENCY | 9946 | 5ceba37db3a0e | 1558946721.588 | Call to undefined method service\Book::fetchById()
+2019-05-27 01:45:41 | EMERGENCY | 9951 | 5ceba3b50390d | 1558946741.256 | Too few arguments to function controller\Index::getOne(), 0 passed in /data/www/Anthony/framework/Anthony/Core/Route.php on line 26 and exactly 1 expected
+2019-05-27 01:45:44 | EMERGENCY | 9951 | 5ceba3b50390d | 1558946744.161 | Too few arguments to function controller\Index::getOne(), 0 passed in /data/www/Anthony/framework/Anthony/Core/Route.php on line 26 and exactly 1 expected
+2019-05-27 01:55:42 | EMERGENCY | 9961 | 5ceba60b69c74 | 1558947342.704 | Call to a member function get() on null
+2019-05-27 01:55:47 | EMERGENCY | 9961 | 5ceba60b69c74 | 1558947347.452 | Call to a member function get() on null
+2019-05-27 01:56:17 | EMERGENCY | 9966 | 5ceba63133f04 | 1558947377.871 | Call to undefined method Swoole\Http\Request::get()
+2019-05-27 01:56:50 | EMERGENCY | 9970 | 5ceba65018730 | 1558947410.500 | Call to undefined method Swoole\Http\Request::get()
+2019-05-27 01:57:05 | EMERGENCY | 9975 | 5ceba660d9c07 | 1558947425.770 | Call to undefined method Swoole\Http\Request::get()
+2019-05-27 01:57:30 | EMERGENCY | 9980 | 5ceba679b8cf9 | 1558947450.342 | Call to undefined method Swoole\Http\Request::get()
+2019-05-27 01:57:59 | EMERGENCY | 9995 | 5ceba69746d3f | 1558947479.858 | Call to undefined method service\Book::fetchById()
+2019-05-27 01:58:15 | EMERGENCY | 10000 | 5ceba6a6189fc | 1558947495.673 | Call to undefined method service\Book::fetchById()
+2019-05-27 01:59:06 | EMERGENCY | 10005 | 5ceba6d8ed496 | 1558947546.976 | Call to undefined method Swoole\Http\Request::get()
+2019-05-27 02:00:30 | EMERGENCY | 10016 | 5ceba72c4a80f | 1558947630.780 | Call to undefined method service\Book::fetchById()

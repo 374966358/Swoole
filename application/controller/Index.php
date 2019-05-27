@@ -3,8 +3,9 @@
 namespace controller;
 
 use service\Book as BookService;
+use Anthony\MVC\Controller;
 
-class Index
+class Index extends Controller
 {
     public function index()
     {
@@ -23,6 +24,15 @@ class Index
     public function list()
     {
         $result = BookService::getInstance()->getBookList();
+
+        return json_encode($result);
+    }
+
+    public function getOne()
+    {
+        var_dump($this->request->get);
+
+        $result = BookService::getInstance()->fetchById($id);
 
         return json_encode($result);
     }

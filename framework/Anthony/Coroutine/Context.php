@@ -56,6 +56,7 @@ class Context
      */
     public function get($key)
     {
+    var_dump($key);
         if (isset(self::$map[$key])) {
             return self::$map[$key];
         }
