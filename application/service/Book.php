@@ -16,8 +16,6 @@ class Book
 
     public function getBookList()
     {
-        echo 2 .PHP_EOL;
-
         return BookModle::getInstance()->fetchAll();
     }
 

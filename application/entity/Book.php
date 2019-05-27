@@ -8,7 +8,6 @@ class Book extends Entity
 {
     public function __construct(array $array)
     {
-        echo 12 .PHP_EOL;
         parent::__construct($array);
     }
 
