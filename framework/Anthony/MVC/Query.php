@@ -85,6 +85,7 @@ class Query
     /**
      * @param $id
      * @param string $fields
+     *
      * @return mixed
      * @desc 通过主键查询记录
      */
@@ -96,7 +97,8 @@ class Query
     /**
      * @param string $where
      * @param string $fields
-     * @param null $orderBy
+     * @param null   $orderBy
+     *
      * @return mixed
      * @desc 通过条件查询一条记录, 并返回一个entity
      */
@@ -104,7 +106,7 @@ class Query
     {
         $result = $this->fetchArray($where, $fields, $orderBy, 1);
 
-        var_dump("MVC\Query\\fetchEntity查询出返回数据：" . $result);
+        var_dump("MVC\Query\\fetchEntity查询出返回数据：".$result);
 
         if (!empty($result[0])) {
             return new $this->eneity($result[0]);
@@ -116,8 +118,9 @@ class Query
     /**
      * @param string $where
      * @param string $field
-     * @param null $orderBy
-     * @param int $limit
+     * @param null   $orderBy
+     * @param int    $limit
+     *
      * @return mixed
      * @desc 通过条件查询
      */
@@ -139,8 +142,9 @@ class Query
     /**
      * @param string $where
      * @param string $fields
-     * @param null $orderBy
+     * @param null   $orderBy
      * @param int limit
+     *
      * @return mixed
      * @desc 通过条件查询记录列表, 并返回entity列表
      */
@@ -161,6 +165,7 @@ class Query
 
     /**
      * @param array $array
+     *
      * @return bool
      * @desc 插入一条记录
      */
@@ -187,7 +192,9 @@ class Query
     /**
      * @param array $array
      * @param $where
+     *
      * @return bool
+     *
      * @throws \Exception
      * @desc 按条件更新记录
      */
@@ -212,7 +219,9 @@ class Query
 
     /**
      * @param $where
+     *
      * @return mixed
+     *
      * @throws \Exception
      * @desc 按条件删除记录
      */
@@ -229,4 +238,3 @@ class Query
         return $result['affected_rows'];
     }
 }
-

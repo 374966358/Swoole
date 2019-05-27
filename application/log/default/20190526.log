@@ -1,4 +1,0 @@
-
-2019-05-26 22:22:54 | ALERT | 8982 | 5ceb742b9219c | 1558934574.96 | swoole exit
-2019-05-26 22:27:07 | ALERT | 8998 | 5ceb752886899 | 1558934827.254 | swoole exit
-2019-05-26 22:58:22 | EMERGENCY | 9086 | 5ceb7c7c140a6 | 1558936702.909 | syntax error, unexpected ';', expecting ',' or ')'
