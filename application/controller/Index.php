@@ -2,7 +2,6 @@
 
 namespace controller;
 
-use Anthony\Pool\Context;
 use service\Book as BookService;
 
 class Index
@@ -24,7 +23,8 @@ class Index
     public function list()
     {
         $result = BookService::getInstance()->getBookList();
+        echo 6 .PHP_EOL;
+
         return json_encode($result);
     }
 }
-

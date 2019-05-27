@@ -16,6 +16,8 @@ class Book
 
     public function getBookList()
     {
+        echo 5 .PHP_EOL;
+
         return BookModle::getInstance()->fetchAll();
     }
 
@@ -34,4 +36,3 @@ class Book
         return BookModle::getInstance()->delete("id={$id}");
     }
 }
-

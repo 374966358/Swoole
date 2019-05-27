@@ -11,7 +11,7 @@ class Book extends Query
 
     public function __construct()
     {
+        echo 4 .PHP_EOL;
         parent::__construct('entity\Book');
     }
 }
-

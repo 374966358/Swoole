@@ -5,13 +5,14 @@ namespace Anthony\MVC;
 class Entity
 {
     /**
-     * Entity constructor
+     * Entity constructor.
+     *
      * @param array $array
      * @desc 把数组填充到Entity中
      */
     public function __construct(array $array)
     {
-    var_dump($array);
+        echo 1 .PHP_EOL;
         if (empty($array)) {
             return $this;
         }
@@ -23,4 +24,3 @@ class Entity
         }
     }
 }
-
