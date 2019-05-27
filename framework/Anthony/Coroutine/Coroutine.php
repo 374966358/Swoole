@@ -90,6 +90,7 @@ class Coroutine
             $id = self::getId();
 
             defer(function () use ($deferCb, $id) {
+                echo 123;
                 self::call($deferCb);
                 self::clear($id);
             });
