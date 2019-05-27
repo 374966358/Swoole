@@ -8,7 +8,7 @@ trait Singleton
 
     public static function getInstance(...$args)
     {
-        var_dump("Anthony\Core\Singleton参数：") . var_dump($args) . PHP_EOL;
+        var_dump("Anthony\Core\Singleton参数：").var_dump($args).PHP_EOL;
 
         if (!self::$instance instanceof static) {
             self::$instance = new static(...$args);
@@ -17,4 +17,3 @@ trait Singleton
         return self::$instance;
     }
 }
-
