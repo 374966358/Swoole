@@ -12,7 +12,7 @@ class Entity
      */
     public function __construct(array $array)
     {
-        echo 6 .PHP_EOL;
+        echo 8 .PHP_EOL;
         if (empty($array)) {
             return $this;
         }

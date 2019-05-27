@@ -46,7 +46,6 @@ class Query
             // 达到同一协程只用一个mysql连接，不同协程用不同的mysql连接
             $this->connections[$coId] = MysqlPool::getInstance()->get();
             // 使用反射类获取查询表的配置信息
-            echo 2 .PHP_EOL;
             $entityRes = new \ReflectionClass($this->entity);
             // 获取数据表名
             $this->name = $entityRes->getConstant('MODLE_NAME');
@@ -54,6 +53,7 @@ class Query
             $this->pk = $entityRes->getConstant('PK_ID');
             // 在协程结束时调用
             defer(function () {
+                echo 7 .PHP_EOL;
                 // 利用协程的defer特性, 自动回收资源
                 $this->recycle();
             });
@@ -128,6 +128,7 @@ class Query
      */
     public function fetchArray($where = '1', $fields = '*', $orderBy = null, $limit = 0)
     {
+        echo 6 .PHP_EOL;
         $query = "SELECT {$fields} FROM {$this->getLibName()} WHERE {$where}";
 
         if ($orderBy) {
