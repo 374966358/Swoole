@@ -5,8 +5,8 @@ namespace Anthony\Pool;
 use Anthony\Coroutine\Coroutine;
 
 /**
- * Class Context
- * @package Anthony\Coroutine
+ * Class Context.
+ *
  * @desc context pool, 请求之间隔离, 请求之内任何地方可以存取
  */
 class Context
@@ -23,8 +23,6 @@ class Context
     public static function getContext()
     {
         $id = Coroutine::getPid();
-        
-        echo "pool\getContext获取ID：" . $id . PHP_EOL;
 
         if (isset(self::$pool[$id])) {
             return self::$pool[$id];
@@ -53,9 +51,6 @@ class Context
     {
         $id = Coroutine::getPid();
 
-        echo 'Pool\set调用获得ID：' . $id . PHP_EOL;
-
         self::$pool[$id] = $context;
     }
 }
-
