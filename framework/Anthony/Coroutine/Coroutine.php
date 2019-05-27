@@ -29,8 +29,6 @@ class Coroutine
     {
         $id = self::getId();
 
-        echo 'setBaseId设置自己的ID显示：' . $id . PHP_EOL;
-
         self::$idMaps[$id] = $id;
 
         return $id;
@@ -38,7 +36,8 @@ class Coroutine
 
     /**
      * @param null $id
-     * @param int $cur
+     * @param int  $cur
+     *
      * @return int | minxed | null
      * @desc 获取当前协程根协程ID
      */
@@ -46,8 +45,6 @@ class Coroutine
     {
         if (null === $id) {
             $id = self::getId();
-
-            echo 'getPid获取的ID显示：' . $id . PHP_EOL;
         }
 
         if (isset(self::$idMaps[$id])) {
@@ -59,14 +56,13 @@ class Coroutine
 
     /**
      * @return bool
+     *
      * @throws \Exception
      * @desc 判断是否是根协程
      */
     public static function checkBaseCo()
     {
         $id = self::getId();
-
-        echo 'checkBaseCo获取的ID显示：' . $id . PHP_EOL;
 
         if (!empty(self::$idMaps[$id])) {
             return false;
@@ -82,6 +78,7 @@ class Coroutine
     /**
      * @param $cb // 协程执行方法
      * @param null $deferCb // defer执行的回调方法
+     *
      * @return mixed
      * @从协程中创建协程, 可保持根协程id的传递
      */
@@ -89,12 +86,8 @@ class Coroutine
     {
         $nid = self::getId();
 
-        echo 'create获取的NID显示：' . $nid . PHP_EOL;
-
         return go(function () use ($cb, $deferCb, $nid) {
             $id = self::getId();
-
-            echo 'create获取的ID显示：' . $id . PHP_EOL;
 
             defer(function () use ($deferCb, $id) {
                 self::call($deferCb);
@@ -102,8 +95,6 @@ class Coroutine
             });
 
             $pid = self::getPid($nid);
-
-            echo 'create获取的PID显示：' . $pid . PHP_EOL;
 
             if ($pid === -1) {
                 $pid = $nid;
@@ -117,6 +108,7 @@ class Coroutine
     /**
      * @param $cb
      * @param $args
+     *
      * @return null
      * @desc 执行回调函数
      */
@@ -152,4 +144,3 @@ class Coroutine
         unset(self::$idMaps[$id]);
     }
 }
-
