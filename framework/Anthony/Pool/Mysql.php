@@ -54,7 +54,7 @@ class Mysql
             // 声明管道长度
             self::$pool = new \chan(self::$config['pool_size']);
             // 循环并创建数据库连接
-            for ($i = 0; $i < 1; $i++) {
+            for ($i = 0; $i < self::$config['pool_size']; $i++) {
                 // 实例化数据库创建类
                 $mysql = new DB();
                 // 调用创建数据库

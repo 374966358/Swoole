@@ -1,0 +1,33 @@
+2019-05-26 18:08:57 | EMERGENCY | 7617 | 5ceb38a69b7eb | 1558919337.134 | syntax error, unexpected '...' (T_ELLIPSIS)
+2019-05-26 18:09:08 | EMERGENCY | 7617 | 5ceb38a69b7eb | 1558919348.928 | Call to undefined method service\Book::getInstance()
+2019-05-26 18:12:26 | CRITICAL | 7689 | 5ceb39793f422 | 1558919546.508 | Error - type:64 - file:/data/www/Anthony/framework/Anthony/Core/Singleton.php - line:5 - msg:Constructor Anthony\Coro\Singleton::__construct() cannot be static
+2019-05-26 18:14:52 | CRITICAL | 7702 | 5ceb3a09f007f | 1558919692.47 | Error - type:64 - file:/data/www/Anthony/framework/Anthony/Core/Singleton.php - line:5 - msg:Constructor Anthony\Core\Singleton::__construct() cannot be static
+2019-05-26 18:15:48 | CRITICAL | 7708 | 5ceb3a4265b6e | 1558919748.576 | Error - type:64 - file:/data/www/Anthony/framework/Anthony/Core/Singleton.php - line:5 - msg:Constructor Anthony\Core\Singleton::__construct() cannot be static
+2019-05-26 18:18:29 | CRITICAL | 7728 | 5ceb3ade41356 | 1558919909.678 | Error - type:64 - file:/data/www/Anthony/framework/Anthony/Core/Singleton.php - line:5 - msg:Constructor Anthony\Core\Singleton::__construct() cannot be static
+2019-05-26 18:20:13 | CRITICAL | 7742 | 5ceb3b4d6e9d9 | 1558920013.581 | Error - type:64 - file:/data/www/Anthony/framework/Anthony/Core/Singleton.php - line:5 - msg:Constructor Anthony\Core\Singleton::__construct() cannot be static
+2019-05-26 18:21:49 | ALERT | 7758 | 5ceb3bab10059 | 1558920109.699 | swoole exit
+2019-05-26 18:25:02 | CRITICAL | 7771 | 5ceb3c6cb0b08 | 1558920302.942 | Error - type:64 - file:/data/www/Anthony/framework/Anthony/Core/Singleton.php - line:5 - msg:Constructor Anthony\Core\Singleton::__construct() cannot be static
+2019-05-26 18:33:59 | EMERGENCY | 7787 | 5ceb3e841a65e | 1558920839.728 | Cannot access parent:: when current class scope has no parent
+2019-05-26 18:34:31 | EMERGENCY | 7792 | 5ceb3ea6bc6cc | 1558920871.516 | Cannot access parent:: when current class scope has no parent
+2019-05-26 18:34:56 | EMERGENCY | 7797 | 5ceb3ebfbbe39 | 1558920896.248 | Cannot access parent:: when current class scope has no parent
+2019-05-26 18:35:06 | EMERGENCY | 7802 | 5ceb3ec9841f0 | 1558920906.57 | Cannot access parent:: when current class scope has no parent
+2019-05-26 18:37:27 | EMERGENCY | 7814 | 5ceb3f5646177 | 1558921047.64 | Cannot access parent:: when current class scope has no parent
+2019-05-26 18:37:52 | ALERT | 7819 | 5ceb3f6f7a505 | 1558921072.68 | swoole exit
+2019-05-26 18:40:12 | ALERT | 7899 | 5ceb3ff876df7 | 1558921212.803 | swoole exit
+2019-05-26 18:47:19 | EMERGENCY | 7910 | 5ceb419e4b5fe | 1558921639.603 | syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+2019-05-26 18:47:38 | EMERGENCY | 7915 | 5ceb41b9ae822 | 1558921658.577 | syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+2019-05-26 18:47:57 | EMERGENCY | 7920 | 5ceb41cc29f9c | 1558921677.383 | syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+2019-05-26 18:48:13 | EMERGENCY | 7925 | 5ceb41dca6d30 | 1558921693.308 | syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+2019-05-26 18:51:32 | ALERT | 7931 | 5ceb42a0e5b6a | 1558921892.508 | swoole exit
+2019-05-26 18:51:40 | ALERT | 7931 | 5ceb42a0e5b6a | 1558921900.136 | swoole exit
+2019-05-26 18:52:02 | EMERGENCY | 7941 | 5ceb42c1ed723 | 1558921922.838 | syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+2019-05-26 18:52:12 | EMERGENCY | 7945 | 5ceb42cbdfd49 | 1558921932.127 | syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+2019-05-26 18:52:12 | EMERGENCY | 7945 | 5ceb42cbdfd49 | 1558921932.390 | syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+2019-05-26 18:52:33 | EMERGENCY | 7950 | 5ceb42e0c5209 | 1558921953.470 | syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+2019-05-26 18:54:45 | EMERGENCY | 8015 | 5ceb435cd95e1 | 1558922085.30 | syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+2019-05-26 18:56:32 | EMERGENCY | 8021 | 5ceb43cc95420 | 1558922192.413 | syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+2019-05-26 18:57:59 | ALERT | 8025 | 5ceb442565827 | 1558922279.237 | swoole exit
+2019-05-26 18:58:41 | EMERGENCY | 8031 | 5ceb444fc9bac | 1558922321.887 | syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+2019-05-26 18:59:08 | EMERGENCY | 8036 | 5ceb446a4a49a | 1558922348.288 | syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+2019-05-26 19:01:26 | EMERGENCY | 8040 | 5ceb44f5ea3fe | 1558922486.77 | syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+2019-05-26 19:01:31 | EMERGENCY | 8040 | 5ceb44f5ea3fe | 1558922491.401 | syntax error, unexpected '->' (T_OBJECT_OPERATOR)
