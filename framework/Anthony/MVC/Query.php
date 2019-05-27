@@ -57,7 +57,7 @@ class Query
             echo 8 .PHP_EOL;
             // 在协程结束时调用
             defer(function () {
-                echo 13 .PHP_EOL;
+                echo 14 .PHP_EOL;
                 // 利用协程的defer特性, 自动回收资源
                 $this->recycle();
             });
@@ -163,6 +163,9 @@ class Query
         if (empty($result)) {
             return $result;
         }
+
+        echo 11 .PHP_EOL;
+        var_dump($this->entity);
 
         foreach ($result as $index => $value) {
             $result[$index] = new $this->entity($value);
