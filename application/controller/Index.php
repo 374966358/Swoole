@@ -24,7 +24,7 @@ class Index
     {
         echo 1 .PHP_EOL;
         $result = BookService::getInstance()->getBookList();
-        echo 7 .PHP_EOL;
+        echo 700 .PHP_EOL;
 
         return json_encode($result);
     }
