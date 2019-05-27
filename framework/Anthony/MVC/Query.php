@@ -53,7 +53,7 @@ class Query
             $this->pk = $entityRes->getConstant('PK_ID');
             // 在协程结束时调用
             defer(function () {
-                echo 7 .PHP_EOL;
+                echo 9 .PHP_EOL;
                 // 利用协程的defer特性, 自动回收资源
                 $this->recycle();
             });

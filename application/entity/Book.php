@@ -6,9 +6,10 @@ use Anthony\MVC\Entity;
 
 class Book extends Entity
 {
-    public function __construct()
+    public function __construct(array $array)
     {
-        echo 11111;
+        echo 7 .PHP_EOL;
+        parent::__construct($array);
     }
 
     /**
