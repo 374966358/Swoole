@@ -3,7 +3,8 @@
 namespace Anthony\MVC;
 
 use Anthony\Coroutine\Coroutine;
-use Anthony\Pool\Mysql as MysqlPool;
+use Anthony\Pool\Mysql as PoolMysql;
+use Anthony\Db\Mysql;
 
 class Query
 {
@@ -19,44 +20,41 @@ class Query
     private $connections;
 
     /**
-     * @desc 对应数据表名
+     * @var mysql连接模型对象
+     */
+    private $mysql;
+
+    /**
+     * @desc 对应数据库表名
      */
     private $name;
 
     /**
-     * @desc 对应数据表的主键
+     * @desc 对应数据库主键
      */
     private $pk;
 
-    /**
-     * @desc Mysql数据链接信息
-     */
-    private $mysql;
-
     public function __construct($entity)
     {
-        $this->entity = $entity;
-
+    echo $entity;die;
+        self::$entity = $entity;
         // 获取协程ID
         $coId = Coroutine::getId();
-        // 判断当前协程是否存在链接如果不存在执行链接操作
+        // 判断当前协程中是否存在连接如果不存在执行链接操作
         if (empty($this->connections[$coId])) {
-            // 不同协程不能复用mysql连接，所以通过协程id进行资源隔离
-            // 达到同一协程只用一个mysql连接，不同协程用不同的mysql连接
-            $this->connections[$coId] = MysqlPool::getInstance()->get();
+            // 获取数据连接并存储在协程ID中共用
+            $this->connections[$coId] = PoolMysql->getInstance()->get();
             // 使用反射类获取查询表的配置信息
-            $entityRes = new \ReflectionClass($this->entity);
-            // 获取数据表名
-            $this->name = $entityRes->getConstant('MODLE_NAME');
-            // 获取数据表主键
-            $this->pk = $entityRes->getConstant('PK_ID');
+            $entityRef = new \ReflectionClass(self::$entity);
+            // 获取数据表名称
+            $this->name = $entityRef->getConstant('MODLE_NAME');
+            // 获取数据表中主键
+            $this->pk = $entityRef->getConstant('PK_ID');
             // 在协程结束时调用
             defer(function () {
-                // 利用协程的defer特性, 自动回收资源
                 $this->recycle();
             });
         }
-
         $this->mysql = $this->connections[$coId];
     }
 
@@ -67,8 +65,8 @@ class Query
     {
         $coId = Coroutine::getId();
 
-        if ($this->connections[$coId]) {
-            MysqlPool::getInstance()->put($this->connections[$coId]);
+        if (isset($this->connections[$coId]) && !empty($this->connections[$coId])) {
+            PoolMysql->getInstance()->put($this->connections[$coId]);
             unset($this->connections[$coId]);
         }
     }
@@ -79,35 +77,35 @@ class Query
      */
     public function getLibName()
     {
-        return $this->name;
+        return self::$name;
     }
 
     /**
      * @param $id
-     * @param string $fields
+     * @param string $field
      * @return mixed
      * @desc 通过主键查询记录
      */
-    public function fetchById($id, $fields = '*')
+    public function fetchById($id, $field)
     {
-        return $this->fetchEntity("{$this->pk} = {$id}", $this->mysql->escape($fields);
+        return $this->fetchEntity("{$this->pk} = {$id}", $field);
     }
 
     /**
      * @param string $where
-     * @param string $fields
+     * @param string $field
      * @param null $orderBy
      * @return mixed
      * @desc 通过条件查询一条记录, 并返回一个entity
      */
-    public function fetchEntity($where = '1', $fields = '*', $orderBy = null)
+    public function fetchEntity($where = '', $fields = '*', $orderBy = null)
     {
-        $result = $this->fetchArray($where, $fields, $orderBy, 1);
+        $result = $this->fetchArray($where, $fields, $orderBy);
 
         var_dump("MVC\Query\\fetchEntity查询出返回数据：" . $result);
 
         if (!empty($result[0])) {
-            return new $this->eneity($result[0]);
+            return new $this->entity($result[0]);
         }
 
         return null;

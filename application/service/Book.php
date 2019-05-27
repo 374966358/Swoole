@@ -16,8 +16,6 @@ class Book
 
     public function getBookList()
     {
-        var_dump(BookModle::getInstance()->asdf());die;
-
         return BookModle::getInstance()->fetchAll();
     }
 

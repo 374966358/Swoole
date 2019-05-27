@@ -1,0 +1,9 @@
+2019-05-27 00:01:36 | EMERGENCY | 9323 | 5ceb8b487adcf | 1558940496.651 | syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+2019-05-27 00:03:37 | EMERGENCY | 9339 | 5ceb8bc794bb6 | 1558940617.864 | syntax error, unexpected ';', expecting ',' or ')'
+2019-05-27 00:06:38 | CRITICAL | 9388 | 5ceb8c7eece9c | 1558940798.976 | Error - type:1 - file:/data/www/Anthony/framework/Anthony/Anthony.php - line:48 - msg:Uncaught Swoole\Exception: failed to listen server port[0.0.0.0:9503], Error: Address already in use[98] in /data/www/Anthony/framework/Anthony/Anthony.php:48
+Stack trace:
+#0 /data/www/Anthony/framework/Anthony/Anthony.php(48): Swoole\Server->__construct('0.0.0.0', '9503')
+#1 /data/www/Anthony/public/index.php(7): Anthony\Anthony::run()
+#2 {main}
+  thrown
+2019-05-27 00:06:51 | EMERGENCY | 9390 | 5ceb8c88c9d8c | 1558940811.30 | syntax error, unexpected ';', expecting ',' or ')'

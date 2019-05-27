@@ -11,12 +11,7 @@ class Book extends Query
 
     public function __construct()
     {
-        parent::__construct('\entity\Book');
-    }
-
-    public static function asdf()
-    {
-        echo 123;die;
+        parent::__construct('entity\Book');
     }
 }
 
