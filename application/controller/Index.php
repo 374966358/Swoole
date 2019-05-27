@@ -22,8 +22,9 @@ class Index
 
     public function list()
     {
+        echo 1 .PHP_EOL;
         $result = BookService::getInstance()->getBookList();
-        echo 6 .PHP_EOL;
+        echo 7 .PHP_EOL;
 
         return json_encode($result);
     }

@@ -35,6 +35,7 @@ class Query
 
     public function __construct($entity)
     {
+        echo 4 .PHP_EOL;
         $this->entity = $entity;
 
         // 获取协程ID
@@ -151,7 +152,7 @@ class Query
      */
     public function fetchAll($where = '1', $fields = '*', $orderBy = null, $limit = 0)
     {
-        echo 3 .PHP_EOL;
+        echo 5 .PHP_EOL;
         $result = $this->fetchArray($where, $fields, $orderBy, $limit);
 
         if (empty($result)) {
