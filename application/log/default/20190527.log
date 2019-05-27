@@ -7,3 +7,6 @@ Stack trace:
 #2 {main}
   thrown
 2019-05-27 00:06:51 | EMERGENCY | 9390 | 5ceb8c88c9d8c | 1558940811.30 | syntax error, unexpected ';', expecting ',' or ')'
+2019-05-27 00:13:59 | ALERT | 9484 | 5ceb8e33ba603 | 1558941239.25 | You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2019-05-27 00:16:52 | ALERT | 9502 | 5ceb8ee38f70f | 1558941412.412 | swoole exit
+2019-05-27 00:18:27 | CRITICAL | 9516 | 5ceb8f40203da | 1558941507.478 | Error - type:4096 - file:/data/www/Anthony/framework/Anthony/MVC/Entity.php - line:14 - msg:Object of class entity\Book could not be converted to string

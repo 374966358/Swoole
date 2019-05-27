@@ -90,7 +90,7 @@ class Query
      */
     public function fetchById($id, $fields = '*')
     {
-        return $this->fetchEntity("{$this->pk} = {$id}", $this->mysql->escape($fields);
+        return $this->fetchEntity("{$this->pk} = {$id}", $this->mysql->escape($fields));
     }
 
     /**
@@ -121,7 +121,7 @@ class Query
      * @return mixed
      * @desc 通过条件查询
      */
-    public function fetchArray($where = '', $fields = '*', $orderBy = null, $limit = 0)
+    public function fetchArray($where = '1', $fields = '*', $orderBy = null, $limit = 0)
     {
         $query = "SELECT {$fields} FROM {$this->getLibName()} WHERE {$where}";
 
@@ -144,7 +144,7 @@ class Query
      * @return mixed
      * @desc 通过条件查询记录列表, 并返回entity列表
      */
-    public function fetchAll($where = '', $fields = '*', $orderBy = null, $limit = 0)
+    public function fetchAll($where = '1', $fields = '*', $orderBy = null, $limit = 0)
     {
         $result = $this->fetchArray($where, $fields, $orderBy, $limit);
 

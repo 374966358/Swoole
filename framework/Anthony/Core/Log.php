@@ -14,7 +14,6 @@ class Log
 
     public static function __callStatic($name, $arguments)
     {
-        var_dump($arguments);
         forward_static_call_array(['SeasLog', $name], $arguments);
     }
 }

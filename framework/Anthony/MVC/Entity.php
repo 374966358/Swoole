@@ -11,7 +11,7 @@ class Entity
      */
     public function __construct(array $array)
     {
-        var_dump("我是Anthony\Entity中this信息为：" . $this);
+    var_dump($array);
         if (empty($array)) {
             return $this;
         }
