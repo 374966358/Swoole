@@ -12,3 +12,41 @@
 2019-05-27 01:58:15 | EMERGENCY | 10000 | 5ceba6a6189fc | 1558947495.673 | Call to undefined method service\Book::fetchById()
 2019-05-27 01:59:06 | EMERGENCY | 10005 | 5ceba6d8ed496 | 1558947546.976 | Call to undefined method Swoole\Http\Request::get()
 2019-05-27 02:00:30 | EMERGENCY | 10016 | 5ceba72c4a80f | 1558947630.780 | Call to undefined method service\Book::fetchById()
+2019-05-27 02:13:05 | EMERGENCY | 10109 | 5cebaa1e011c4 | 1558948385.881 | Call to undefined method service\Book::fetchById()
+2019-05-27 02:13:06 | EMERGENCY | 10109 | 5cebaa1e011c4 | 1558948386.166 | Call to undefined method service\Book::fetchById()
+2019-05-27 02:13:29 | EMERGENCY | 10114 | 5cebaa3917ef7 | 1558948409.726 | Call to undefined method service\Book::fetchById()
+2019-05-27 02:13:33 | EMERGENCY | 10114 | 5cebaa3917ef7 | 1558948413.995 | Call to undefined method service\Book::fetchById()
+2019-05-27 02:14:08 | EMERGENCY | 10121 | 5cebaa5f6e3da | 1558948448.90 | Call to undefined method service\Book::fetchById()
+2019-05-27 02:15:08 | EMERGENCY | 10126 | 5cebaa9aa49a3 | 1558948508.581 | Call to undefined method service\Book::fetchById()
+2019-05-27 02:15:26 | EMERGENCY | 10131 | 5cebaaad7794b | 1558948526.49 | Call to undefined method service\Book::fetchById()
+2019-05-27 02:17:11 | EMERGENCY | 10139 | 5cebab1467c79 | 1558948631.593 | Call to undefined method service\Book::fetchById()
+2019-05-27 02:17:27 | ALERT | 10144 | 5cebab26a4ac3 | 1558948647.224 | swoole exit
+2019-05-27 02:17:50 | EMERGENCY | 10149 | 5cebab3de939e | 1558948670.531 | Call to undefined method service\Book::fetchById()
+2019-05-27 02:26:43 | EMERGENCY | 10164 | 5cebad500121a | 1558949203.667 | Call to undefined method service\Book::fetchById()
+2019-05-27 02:27:07 | ALERT | 10169 | 5cebad693e3d4 | 1558949227.843 | swoole exit
+2019-05-27 02:30:13 | EMERGENCY | 10176 | 5cebae2462fe5 | 1558949413.11 | Call to undefined method service\Book::fetchById()
+2019-05-27 02:30:32 | EMERGENCY | 10181 | 5cebae3827922 | 1558949432.934 | Call to undefined method service\Book::fetchById()
+2019-05-27 02:30:36 | EMERGENCY | 10181 | 5cebae3827922 | 1558949436.928 | Call to undefined method service\Book::fetchById()
+2019-05-27 02:32:04 | EMERGENCY | 10187 | 5cebae92375fa | 1558949524.365 | Class name must be a valid object or a string
+2019-05-27 17:48:35 | EMERGENCY | 13055 | 5cec856052d14 | 1559004515.606 | Class name must be a valid object or a string
+2019-05-27 17:49:36 | EMERGENCY | 13060 | 5cec859dd9c47 | 1559004576.393 | Class name must be a valid object or a string
+2019-05-27 17:50:33 | EMERGENCY | 13060 | 5cec859dd9c47 | 1559004633.426 | Class name must be a valid object or a string
+2019-05-27 17:55:05 | EMERGENCY | 13125 | 5cec86e8d7538 | 1559004905.133 | Class name must be a valid object or a string
+2019-05-27 17:55:40 | ALERT | 13130 | 5cec870bdcc61 | 1559004940.579 | swoole exit
+2019-05-27 17:55:44 | ALERT | 13130 | 5cec870bdcc61 | 1559004944.748 | swoole exit
+2019-05-27 17:56:24 | ALERT | 13135 | 5cec87374649d | 1559004984.26 | swoole exit
+2019-05-27 17:56:41 | ALERT | 13140 | 5cec8748f09a3 | 1559005001.568 | swoole exit
+2019-05-27 17:57:00 | ALERT | 13145 | 5cec875c34657 | 1559005020.753 | swoole exit
+2019-05-27 17:57:32 | ALERT | 13150 | 5cec877c1ebb4 | 1559005052.758 | swoole exit
+2019-05-27 17:59:14 | EMERGENCY | 13155 | 5cec879933951 | 1559005154.971 | Argument 1 passed to entity\Book::__construct() must be of the type array, null given, called in /data/www/Anthony/framework/Anthony/MVC/Query.php on line 112
+2019-05-27 17:59:36 | ALERT | 13160 | 5cec87e873254 | 1559005176.8 | You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' OR LIMIT 1' at line 1
+2019-05-27 17:59:39 | ALERT | 13160 | 5cec87e873254 | 1559005179.93 | You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' OR 1=1 LIMIT 1' at line 1
+2019-05-27 17:59:46 | ALERT | 13160 | 5cec87e873254 | 1559005186.991 | You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' OR 1=1' LIMIT 1' at line 1
+2019-05-27 18:17:12 | EMERGENCY | 13243 | 5cec8ba8d2e0f | 1559006232.717 | Call to undefined method controller\Index::update()
+2019-05-27 18:17:27 | ALERT | 13253 | 5cec8c25a4f64 | 1559006247.700 | You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id=1' at line 1
+2019-05-27 18:17:29 | ALERT | 13253 | 5cec8c25a4f64 | 1559006249.772 | You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id=1' at line 1
+2019-05-27 18:17:43 | ALERT | 13258 | 5cec8c36389e0 | 1559006263.233 | swoole exit
+2019-05-27 18:20:49 | ALERT | 13273 | 5cec8cf07da9e | 1559006449.699 | You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id=1' at line 1
+2019-05-27 18:22:34 | ALERT | 13283 | 5cec8d57e4705 | 1559006554.510 | swoole exit
+2019-05-27 18:23:17 | ALERT | 13288 | 5cec8d83c8ce0 | 1559006597.375 | swoole exit
+2019-05-27 18:23:45 | ALERT | 13293 | 5cec8da1201bd | 1559006625.843 | swoole exit

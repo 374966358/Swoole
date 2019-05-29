@@ -30,9 +30,25 @@ class Index extends Controller
 
     public function getOne()
     {
-        var_dump($this->request->get);
+        $result = BookService::getInstance()->getBookById($this->request->get['id']);
 
-        $result = BookService::getInstance()->fetchById($id);
+        return json_encode($result);
+    }
+
+    public function insert()
+    {
+        $result = BookService::getInstance()->insert($this->request->get);
+
+        return json_encode($result);
+    }
+
+    public function update()
+    {
+        $array = [
+            'book' => $this->request->get['book']
+        ];
+
+        $result = BookService::getInstance()->updateById($array, $this->request->get['id']);
 
         return json_encode($result);
     }

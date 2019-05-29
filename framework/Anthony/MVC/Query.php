@@ -110,10 +110,8 @@ class Query
     {
         $result = $this->fetchArray($where, $fields, $orderBy, 1);
 
-        var_dump("MVC\Query\\fetchEntity查询出返回数据：".$result);
-
-        if (!empty($result[0])) {
-            return new $this->eneity($result[0]);
+        if (!empty($result)) {
+            return new $this->entity($result[0]);
         }
 
         return null;
@@ -175,6 +173,9 @@ class Query
      */
     public function insert(array $array)
     {
+        (string) $strFields = '';
+        (string) $strValues = '';
+
         foreach ($array as $name => $value) {
             $strFields .= "`{$this->mysql->escape($name)}`,";
             $strValues .= "'{$this->mysql->escape($value)}',";
@@ -213,6 +214,8 @@ class Query
         foreach ($array as $key => $value) {
             $strUpdateFields .= "`{$this->mysql->escape($key)}` = '{$this->mysql->escape($value)}',";
         }
+
+        $strUpdateFields = rtrim($strUpdateFields, ',');
 
         $query = "UPDATE {$this->name} SET {$strUpdateFields} WHERE {$where}";
 
