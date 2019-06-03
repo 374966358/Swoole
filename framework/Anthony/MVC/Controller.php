@@ -14,4 +14,3 @@ class Controller
         $this->request = $context->getRequest();
     }
 }
-

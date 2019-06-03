@@ -16,11 +16,6 @@ class Index extends Controller
         }
     }
 
-    public function user()
-    {
-        return 456789123;
-    }
-
     public function tong()
     {
         return 'tong hahahaha';
@@ -35,7 +30,7 @@ class Index extends Controller
 
     public function getOne()
     {
-        $result = BookService::getInstance()->getBookById($this->request->get['id']);
+        $result = BookService::getInstance()->getBookById($this->request->get['uid']);
 
         return json_encode($result);
     }
@@ -50,7 +45,7 @@ class Index extends Controller
     public function update()
     {
         $array = [
-            'book' => $this->request->get['book']
+            'book' => $this->request->get['book'],
         ];
 
         $result = BookService::getInstance()->updateById($array, $this->request->get['id']);
