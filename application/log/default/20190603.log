@@ -1,0 +1,32 @@
+2019-06-03 00:22:42 | EMERGENCY | 40323 | 5cf4cac0c0622 | 1559546562.484 | Call to undefined function Anthony\Core\is_callback()
+2019-06-03 00:23:13 | EMERGENCY | 40331 | 5cf4cae031f08 | 1559546593.309 | Call to undefined function is_callback()
+2019-06-03 00:23:13 | EMERGENCY | 40331 | 5cf4cae031f08 | 1559546593.917 | Call to undefined function is_callback()
+2019-06-03 00:25:20 | EMERGENCY | 40342 | 5cf4cb5eb3a63 | 1559546720.152 | Instantiation of 'Closure' is not allowed
+2019-06-03 00:28:00 | EMERGENCY | 40367 | 5cf4cbffad664 | 1559546880.619 | Too few arguments to function Anthony\Core\Route::dispatch(), 0 passed in /data/www/Anthony/framework/Anthony/Anthony.php on line 87 and exactly 1 expected
+2019-06-03 00:33:15 | EMERGENCY | 40402 | 5cf4cd3ab9c96 | 1559547195.247 | Call to undefined method controller\Index::method()
+2019-06-03 00:38:47 | EMERGENCY | 40436 | 5cf4ce86d59e4 | 1559547527.356 | Too few arguments to function Anthony\Core\Config::{closure}(), 0 passed in /data/www/Anthony/framework/Anthony/Core/Route.php on line 46 and exactly 1 expected
+2019-06-03 00:38:48 | EMERGENCY | 40436 | 5cf4ce86d59e4 | 1559547528.316 | Too few arguments to function Anthony\Core\Config::{closure}(), 0 passed in /data/www/Anthony/framework/Anthony/Core/Route.php on line 46 and exactly 1 expected
+2019-06-03 01:06:39 | ALERT | 40710 | 5cf4d50dc6e95 | 1559549199.847 | swoole exit
+2019-06-03 01:06:58 | ALERT | 40715 | 5cf4d5224bd06 | 1559549218.445 | swoole exit
+2019-06-03 01:12:38 | ALERT | 40798 | 5cf4d671e7353 | 1559549558.53 | swoole exit
+2019-06-03 01:12:46 | ALERT | 40798 | 5cf4d671e7353 | 1559549566.532 | swoole exit
+2019-06-03 01:14:44 | ALERT | 40803 | 5cf4d6f1ee87b | 1559549684.170 | swoole exit
+2019-06-03 01:14:44 | ALERT | 40803 | 5cf4d6f1ee87b | 1559549684.379 | swoole exit
+2019-06-03 01:14:50 | ALERT | 40803 | 5cf4d6f1ee87b | 1559549690.23 | swoole exit
+2019-06-03 01:17:12 | ALERT | 40811 | 5cf4d78803755 | 1559549832.622 | swoole exit
+2019-06-03 01:17:16 | ALERT | 40811 | 5cf4d78803755 | 1559549836.674 | swoole exit
+2019-06-03 01:17:17 | ALERT | 40811 | 5cf4d78803755 | 1559549837.43 | swoole exit
+2019-06-03 01:17:23 | ALERT | 40811 | 5cf4d78803755 | 1559549843.767 | swoole exit
+2019-06-03 01:18:11 | ALERT | 40816 | 5cf4d7c237e2c | 1559549891.663 | swoole exit
+2019-06-03 01:18:18 | ALERT | 40816 | 5cf4d7c237e2c | 1559549898.583 | swoole exit
+2019-06-03 01:18:23 | ALERT | 40816 | 5cf4d7c237e2c | 1559549903.558 | swoole exit
+2019-06-03 01:18:33 | ALERT | 40816 | 5cf4d7c237e2c | 1559549913.68 | swoole exit
+2019-06-03 01:27:52 | EMERGENCY | 40836 | 5cf4d9f7b9a41 | 1559550472.989 | Cannot access private property EasySwoole\Http\Request::$request
+2019-06-03 01:27:59 | EMERGENCY | 40841 | 5cf4da0f34c02 | 1559550479.343 | Cannot access private property EasySwoole\Http\Request::$request
+2019-06-03 01:28:06 | EMERGENCY | 40841 | 5cf4da0f34c02 | 1559550486.58 | Cannot access private property EasySwoole\Http\Request::$request
+2019-06-03 01:28:11 | EMERGENCY | 40841 | 5cf4da0f34c02 | 1559550491.506 | Cannot access private property EasySwoole\Http\Request::$request
+2019-06-03 01:28:16 | EMERGENCY | 40841 | 5cf4da0f34c02 | 1559550496.15 | Cannot access private property EasySwoole\Http\Request::$request
+2019-06-03 01:37:29 | EMERGENCY | 40841 | 5cf4da0f34c02 | 1559551049.741 | Class 'Anthony\Core\Exception' not found
+2019-06-03 01:37:42 | EMERGENCY | 40841 | 5cf4da0f34c02 | 1559551062.984 | Cannot access private property EasySwoole\Http\Request::$request
+2019-06-03 01:38:45 | EMERGENCY | 40861 | 5cf4dc923cfab | 1559551125.324 | Class 'Anthony\Core\Exception' not found
+2019-06-03 01:42:07 | EMERGENCY | 40861 | 5cf4dc923cfab | 1559551327.403 | Class 'Anthony\Core\Exception' not found

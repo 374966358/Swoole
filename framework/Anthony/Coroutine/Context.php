@@ -2,6 +2,9 @@
 
 namespace Anthony\Coroutine;
 
+use EasySwoole\Http\Request;
+use EasySwoole\Http\Response;
+
 class Context
 {
     /**
@@ -21,8 +24,8 @@ class Context
 
     public function __construct(\swoole_http_request $request, \swoole_http_response $response)
     {
-        self::$request = $request;
-        self::$response = $response;
+        self::$request = new Request($request);
+        self::$response = new Response($response);
     }
 
     /**

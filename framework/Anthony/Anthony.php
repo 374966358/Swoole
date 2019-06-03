@@ -68,7 +68,7 @@ class Anthony
             }
         });
 
-        $http->on('request', function ($request, $response) {
+        $http->on('Request', function ($request, $response) {
             try {
                 // 初始化根协程ID
                 Coroutine::setBaseId();
@@ -84,7 +84,7 @@ class Anthony
                     Pool\Context::clear();
                 });
 
-                $result = Route::dispatch($request->server['path_info']);
+                $result = Route::dispatch();
                 $response->end($result);
             } catch (\Exception $e) {
                 Log::alert($e->getMessage(), $e->getTrace());
@@ -115,7 +115,6 @@ class Anthony
 
         // 约定框架类都放在framework目录下，业务类都在application下
         $findPath = [
-            $rootPath . DS . 'framework' . DS,
             $rootPath . DS . 'application' . DS,
         ];
 

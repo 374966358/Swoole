@@ -2,7 +2,7 @@
 
 use Anthony\Anthony;
 
-require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'framework' . DIRECTORY_SEPARATOR . 'Anthony' . DIRECTORY_SEPARATOR . 'Anthony.php';
+require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 
 Anthony::run();
 

@@ -16,6 +16,11 @@ class Index extends Controller
         }
     }
 
+    public function user()
+    {
+        return 456789123;
+    }
+
     public function tong()
     {
         return 'tong hahahaha';

@@ -2,7 +2,7 @@
 
 return [
     'host' => '0.0.0.0',
-    'port' => '9503',
+    'port' => '9504',
     'httpServerSet' => [
         'worker_num' => 1,
     ],
@@ -20,5 +20,15 @@ return [
             'strict_type' => true,  //ture，会自动表数字转为int类型
         ],
     ],
+    'route' => function (FastRoute\RouteCollector $r) {
+        $r->addRoute('GET', '/users', ['controller\Index', 'list']);
+        $r->addRoute('GET', '/users/{uid:\d+}', 'controller\Index@user');
+        $r->get('/test', function () {
+            return 'i am test';
+        });
+        $r->post('/post', function () {
+            return 'i am post';
+        });
+    },
 ];
 
