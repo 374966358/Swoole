@@ -21,10 +21,10 @@ class Route
         if ('/favicon.ico' == $path) {
             return '';
         }
-        $r = Config::get('router');
+        $route = Config::get('router');
 
         // 没有路由配置或者配置不可执行，则走默认路由
-        if (empty($r) || !is_callable($r)) {
+        if (empty($route) || !is_callable($route)) {
             return self::normal($path, $request);
         }
 
