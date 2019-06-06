@@ -29,7 +29,7 @@ class Route
         }
 
         // 引入fastrouter，进行路由检测
-        $dispatcher = simpleDispatcher($r);
+        $dispatcher = simpleDispatcher($route);
         $routeInfo = $dispatcher->dispatch($request->getMethod(), $path);
 
         // 匹配到了

@@ -22,7 +22,7 @@ return [
     ],
     'router' => function (FastRoute\RouteCollector $r) {
         $r->addRoute('GET', '/users', ['controller\Index', 'list']);
-        $r->addRoute('GET', '/user/{uid:\d+}', 'controller\Index@getOne');
+        $r->addRoute('GET', '/user/{bid:\d+}', 'controller\Index@getOne');
         $r->get('/add', ['controller\Index', 'insert']);
         $r->get('/test', function () {
             return 'i am test';

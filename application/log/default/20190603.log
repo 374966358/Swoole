@@ -30,3 +30,7 @@
 2019-06-03 01:37:42 | EMERGENCY | 40841 | 5cf4da0f34c02 | 1559551062.984 | Cannot access private property EasySwoole\Http\Request::$request
 2019-06-03 01:38:45 | EMERGENCY | 40861 | 5cf4dc923cfab | 1559551125.324 | Class 'Anthony\Core\Exception' not found
 2019-06-03 01:42:07 | EMERGENCY | 40861 | 5cf4dc923cfab | 1559551327.403 | Class 'Anthony\Core\Exception' not found
+2019-06-03 01:55:09 | EMERGENCY | 40989 | 5cf4e06933007 | 1559552109.531 | Class 'Anthony\Core\Route' not found
+2019-06-03 01:56:02 | EMERGENCY | 41104 | 5cf4e0a01ca23 | 1559552162.420 | Undefined class constant '_CONTROLLER_KEY_'
+2019-06-03 01:56:04 | EMERGENCY | 41104 | 5cf4e0a01ca23 | 1559552164.944 | Undefined class constant '_CONTROLLER_KEY_'
+2019-06-03 02:01:32 | EMERGENCY | 41148 | 5cf4e1e871776 | 1559552492.285 | Class 'controller\user' not found

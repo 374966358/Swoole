@@ -1,0 +1,11 @@
+2019-06-05 22:21:34 | EMERGENCY | 2005 | 5cf8a2ce66bda | 1559798494.748 | Argument 1 passed to FastRoute\simpleDispatcher() must be callable, null given, called in /data/www/Anthony/framework/Anthony/Core/Route.php on line 32
+2019-06-05 22:23:23 | EMERGENCY | 2059 | 5cf8a34ae6c19 | 1559798603.64 | Argument 1 passed to FastRoute\simpleDispatcher() must be callable, null given, called in /data/www/Anthony/framework/Anthony/Core/Route.php on line 32
+2019-06-05 22:23:23 | EMERGENCY | 2059 | 5cf8a34ae6c19 | 1559798603.682 | Argument 1 passed to FastRoute\simpleDispatcher() must be callable, null given, called in /data/www/Anthony/framework/Anthony/Core/Route.php on line 32
+2019-06-05 22:23:46 | EMERGENCY | 2064 | 5cf8a360a9da3 | 1559798626.206 | Call to undefined method controller\Index::getRequestParam()
+2019-06-05 22:23:49 | EMERGENCY | 2064 | 5cf8a360a9da3 | 1559798629.302 | Call to undefined method controller\Index::getRequestParam()
+2019-06-05 22:25:34 | EMERGENCY | 2127 | 5cf8a3cd0da12 | 1559798734.757 | Call to undefined method Swoole\Coroutine\MySQL::escape()
+2019-06-05 22:26:36 | EMERGENCY | 2127 | 5cf8a3cd0da12 | 1559798796.869 | Call to undefined method Swoole\Coroutine\MySQL::escape()
+2019-06-05 22:26:40 | EMERGENCY | 2132 | 5cf8a40fa17bf | 1559798800.258 | Call to undefined method Swoole\Coroutine\MySQL::escape()
+2019-06-05 22:33:25 | ALERT | 2147 | 5cf8a5a285ea7 | 1559799205.152 | swoole exit
+2019-06-05 22:33:54 | EMERGENCY | 2153 | 5cf8a5c0b3b16 | 1559799234.135 | Call to undefined method Swoole\Coroutine\MySQL::escape()
+2019-06-05 22:54:34 | ALERT | 15590 | 5cf8aa9691f68 | 1559800474.786 | swoole exit

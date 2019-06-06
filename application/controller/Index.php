@@ -30,7 +30,13 @@ class Index extends Controller
 
     public function getOne()
     {
-        $result = BookService::getInstance()->getBookById($this->request->get['uid']);
+        $bid = $this->request->getRequestParam('bid');
+
+        if (!$bid) {
+            return '参数问题';
+        }
+
+        $result = BookService::getInstance()->getBookById($bid);
 
         return json_encode($result);
     }
