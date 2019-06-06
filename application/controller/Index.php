@@ -9,11 +9,9 @@ class Index extends Controller
 {
     public function index()
     {
-        try {
-            return 'i am family by route!';
-        } catch (\Exception $e) {
-            return $e->getMessage();
-        }
+        return $this->template->render('index.twig', [
+            'name' => 'tong'
+        ]);
     }
 
     public function tong()

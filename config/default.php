@@ -1,5 +1,7 @@
 <?php
 
+use Anthony\Anthony;
+
 return [
     'host' => '0.0.0.0',
     'port' => '9504',
@@ -31,4 +33,10 @@ return [
             return 'must post method';
         });
     },
+    'template' => [
+        // 模板页面的存放目录
+        'path' => Anthony::$applicationPath . DS . 'template' . DS . 'default', // 模版目录, 空则默认 template/default
+        // 模板缓存页面的存放目录
+        'cache' => Anthony::$applicationPath . DS . 'template' . DS . 'default_cache', // 缓存目录, 空则默认 template/
+    ],
 ];

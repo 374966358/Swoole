@@ -1,0 +1,5 @@
+2019-06-06 00:23:02 | EMERGENCY | 15989 | 5cf8bf517689d | 1559805782.814 | Class 'Anthony\Helper\Template' not found
+2019-06-06 00:25:11 | CRITICAL | 16102 | 5cf8bfd760f52 | 1559805911.625 | Error - type:1 - file:/data/www/Anthony/framework/Anthony/Helper/Template.php - line:11 - msg:Trait 'Family\Core\Singleton' not found
+2019-06-06 00:28:44 | EMERGENCY | 16108 | 5cf8c0aa489f2 | 1559806124.70 | Class 'Anthony\Helper\Twig_Loader_Filesystem' not found
+2019-06-06 00:28:45 | EMERGENCY | 16108 | 5cf8c0aa489f2 | 1559806125.891 | Class 'Anthony\Helper\Twig_Loader_Filesystem' not found
+2019-06-06 00:29:13 | ALERT | 16115 | 5cf8c0c85ba49 | 1559806153.723 | The "path" directory does not exist ("/data/www/Anthony/path").

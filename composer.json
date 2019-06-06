@@ -21,6 +21,7 @@
         "nikic/fast-route": "*",
         "ext-swoole": ">=4.2.9",
         "ext-seaslog": ">=1.9.0",
-        "easyswoole/http": "^1.0"
+        "easyswoole/http": "^1.0",
+        "twig/twig": "~1.0"
     }
 }
