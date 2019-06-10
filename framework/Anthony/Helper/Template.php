@@ -3,7 +3,8 @@
 namespace Anthony\Helper;
 
 use Anthony\Core\Singleton;
-use Twig;
+use Twig\Loader\FilesystemLoader;
+use Twig\Environment;
 use Anthony\Core\Config;
 
 class Template
@@ -15,10 +16,8 @@ class Template
     public function __construct()
     {
         $templateConfig = Config::get('template');
-        $loader = new \Twig_Loader_Filesystem($templateConfig['path']);
-        $this->template = new \Twig_Environment($loader,array(
-            'cache' => $templateConfig['cache'],
-        ));
+        $loader = new FilesystemLoader($templateConfig['path']);
+        $this->template = new Environment($loader, $templateConfig['config']);
     }
 }
 

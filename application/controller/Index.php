@@ -10,7 +10,7 @@ class Index extends Controller
     public function index()
     {
         return $this->template->render('index.twig', [
-            'name' => 'tong'
+            'name' => '我做出来了'
         ]);
     }
 
