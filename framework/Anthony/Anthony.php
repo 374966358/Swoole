@@ -55,6 +55,7 @@ class Anthony
             }
 
             try {
+                Config::loadLazy();
                 $mysqlConfig = Config::get('mysql');
                 if (!empty($mysqlConfig)) {
                     Pool\Mysql::getInstance($mysqlConfig);

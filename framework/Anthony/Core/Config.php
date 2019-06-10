@@ -3,6 +3,7 @@
 namespace Anthony\Core;
 
 use Anthony\Anthony;
+use Anthony\Helper\Dir;
 
 class Config
 {
@@ -17,6 +18,19 @@ class Config
     public static function load()
     {
         self::$configMap = require Anthony::$rootPath . DS . 'config' . DS . 'default.php';
+    }
+
+    public static function loadLazy()
+    {
+        $configDir = Dir::tree(Anthony::$rootPath . DS . 'config', "/.php$/");
+
+        foreach ($configDir as $filed) {
+            if (strstr($filed, 'default.php')) {
+                continue;
+            } else {
+                self::$configMap[substr($filed, strripos($filed, DS) + 1, -4)] = include "{$filed}";
+            }
+        }
     }
 
     /**
