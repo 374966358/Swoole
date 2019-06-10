@@ -2,7 +2,6 @@
 
 namespace Anthony\Db;
 
-use Anthony\Core\Log;
 use Swoole\Coroutine\Mysql as SwMySql;
 
 class Mysql
@@ -16,7 +15,9 @@ class Mysql
 
     /**
      * @param $config
+     *
      * @return mixed
+     *
      * @throws \Exception
      * @desc 链接mysql
      */
@@ -31,7 +32,7 @@ class Mysql
         // 判断是否连接成功
         if (false === $res) {
             // 抛出异常
-            throw new \Exception($masterRes->connect_error, $masterRes->connect_errno);
+            throw new \Exception($masterMysql->connect_error, $masterMysql->connect_errno);
         } else {
             // 将数据库连接存储到全局变量中
             self::$master = $masterMysql;
@@ -54,13 +55,13 @@ class Mysql
                 }
             } else {
                 // 多维数组循环创建连接
-                for ($i = 0; $i < count(self::$config['slave']); $i++) {
+                for ($i = 0; $i < count(self::$config['slave']); ++$i) {
                     // 从数据库连接
                     $res = $slaveMysql->connect(self::$config['slave'][$i]);
                     // 判断是否连接成功
                     if (false === $res) {
                         // 抛出异常
-                        throw new \Exception($slaveRes->connect_error, $slaveRes->connect_errno);
+                        throw new \Exception($slaveMysql->connect_error, $slaveMysql->connect_errno);
                     } else {
                         // 将数据库连接存储到全局变量中
                         self::$slave[] = $slaveMysql;
@@ -75,8 +76,10 @@ class Mysql
     /**
      * @param $name
      * @param $arguments
+     *
      * @return mixed
      * @desc 利用__call实现操作MySQL并能做到断线重连等相关检测
+     *
      * @throws \Exception
      */
     public function __call($name, $arguments)
@@ -109,6 +112,7 @@ class Mysql
      * @param $sql
      * @desc 根据sql语句, 选择主还是从
      * @ 判断有select则选择从库, insert、update、delete使用主库
+     *
      * @return array
      */
     private static function chooseDb($sql)
@@ -149,8 +153,10 @@ class Mysql
     /**
      * @param $type
      * @param $index
+     *
      * @return MySQL
      * @desc 单个数据库重连
+     *
      * @throws \Exception
      */
     private static function reconnect($type, $index)
@@ -193,6 +199,7 @@ class Mysql
     /**
      * @param $result
      * @param $db MySQL
+     *
      * @return array
      * @desc 格式化返回结果：查询：返回结果集, 插入：返回新增id, 更新与删除等操作：返回影响条数
      */
@@ -212,4 +219,3 @@ class Mysql
         return $result;
     }
 }
-
