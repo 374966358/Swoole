@@ -28,32 +28,30 @@ class Query
      */
     private $pk;
 
-    /**
-     * @desc Mysql数据链接信息
-     */
-    private $mysql;
-
     public function __construct($entity)
     {
         $this->entity = $entity;
+        // 使用反射类获取查询表的配置信息
+        $entityRes = new \ReflectionClass($this->entity);
+        // 获取数据表名
+        $this->name = $entityRes->getConstant('MODLE_NAME');
+        // 获取数据表主键
+        $this->pk = $entityRes->getConstant('PK_ID');
+    }
 
+    /**
+     * @desc 获取连接数据
+     */
+    public function getDb()
+    {
         // 获取协程ID
         $coId = Coroutine::getId();
+
         // 判断当前协程是否存在链接如果不存在执行链接操作
         if (empty($this->connections[$coId])) {
             // 不同协程不能复用mysql连接，所以通过协程id进行资源隔离
             // 达到同一协程只用一个mysql连接，不同协程用不同的mysql连接
             $this->connections[$coId] = MysqlPool::getInstance()->get();
-
-            // 使用反射类获取查询表的配置信息
-            $entityRes = new \ReflectionClass($this->entity);
-
-            // 获取数据表名
-            $this->name = $entityRes->getConstant('MODLE_NAME');
-
-            // 获取数据表主键
-            $this->pk = $entityRes->getConstant('PK_ID');
-
             // 在协程结束时调用
             defer(function () {
                 // 利用协程的defer特性, 自动回收资源
@@ -61,7 +59,7 @@ class Query
             });
         }
 
-        $this->mysql = $this->connections[$coId];
+        return $this->connections[$coId];
     }
 
     /**
@@ -138,7 +136,7 @@ class Query
             $query .= " LIMIT {$limit}";
         }
 
-        return $this->mysql->query($query);
+        return $this->getDb()->query($query);
     }
 
     /**
@@ -185,7 +183,7 @@ class Query
         $strValues = rtrim($strValues, ',');
 
         $query = "INSERT INTO {$this->name} ({$strFields}) VALUES ({$strValues})";
-        $result = $this->mysql->query($query);
+        $result = $this->getDb()->query($query);
 
         if (!empty($result['insert_id'])) {
             return $result['insert_id'];
@@ -219,7 +217,7 @@ class Query
 
         $query = "UPDATE {$this->name} SET {$strUpdateFields} WHERE {$where}";
 
-        $result = $this->mysql->query($query);
+        $result = $this->getDb()->query($query);
 
         return $result['affected_rows'];
     }
@@ -240,7 +238,7 @@ class Query
 
         $query = "DELETE FROM {$this->name} WHERE {$where}";
 
-        $result = $this->mysql->query($query);
+        $result = $this->getDb()->query($query);
 
         return $result['affected_rows'];
     }
