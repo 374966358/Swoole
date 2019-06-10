@@ -55,12 +55,11 @@ class Context
 
     /**
      * @param $key
+     *
      * @return mixed | null
      */
     public function get($key)
     {
-    echo "你进入了key的世界：" . PHP_EOL;
-    var_dump($key);
         if (isset(self::$map[$key])) {
             return self::$map[$key];
         }
@@ -68,4 +67,3 @@ class Context
         return null;
     }
 }
-
